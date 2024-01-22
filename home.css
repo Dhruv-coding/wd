@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap');
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.43, 1.1, .62, 1.08);
+    text-transform: capitalize;
+}
+
+html {
+    font: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: peru;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span {
+    font-size: 2rem;
+    color: peru;
+}
+
+.heading h3 {
+    font-size: 3rem;
+    color: black;
+}
+
+section {
+    padding: 3rem 3%;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    background: peru;
+    color: white;
+    font-size: 100%;
+    cursor: pointer;
+    padding: 10px 16px;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgb(174, 155, 12));
+    z-index: 99;
+    transition: background-color 0.5s ease;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.header .logo i {
+    color: peru;
+    padding-right: .5rem;
+}
+
+.header .logo a {
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+}
+.navigation .ok {
+    width: 130px;
+    height: 50px;
+    background: #fc8019; 
+    border: 2px solid #fc8019;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.navigation .ok:hover {
+    background: white;
+    color: #fc8019; 
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-4rem) scale(0);
+        opacity: 0;
+    }
+}
+
+.Home {
+    padding: 0;
+    background: rgba(0, 0, 0, .7);
+}
+
+.Home .swiper-slide {
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .1);
+    z-index: -1;
+}
+
+.Home .swiper-slide .content {
+    text-align: left;
+    width: 70rem;
+}
+
+.Home .swiper-slide .content span {
+    font-size: 3rem;
+    display: block;
+    padding-bottom: 2rem;
+    color: whitesmoke;
+    animation: fadeIn 0.4s cubic-bezier(0.54, 1.3, .63, 1.34) .2s;
+}
+
+.Home .swiper-slide .content h3 {
+    font-size: 8vh;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    line-height: 1;
+    padding: 2rem 0;
+    animation: fadeIn 0.4s cubic-bezier(0.54, 1.3, .63, 1.34) .4s;
+}
+
+.Home .swiper-slide .content .btn {
+    animation: fadeIn 0.4s cubic-bezier(0.54, 1.3, .63, 1.34) .6s;
+}
+
+.Home.swiper-slide-active .content {
+    display: inline-block;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: aqua;
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 2rem;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: wrap;
+    gap: 2rem;
+}
+
+.about .image {
+    flex: 1 1 41rem;
+}
+
+.about .image img {
+    width: 100%;
+}
+
+.about .image .content {
+    flex: 1 1 41rem;
+}
+
+.about .content .title {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+.about .content p {
+    font-size: 1rem;
+    color: grey;
+    padding: 1rem 0;
+    line-height: 1;
+}
+
+.about .content .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about .content .icons-container .icons {
+    flex: 1 1 16rem;
+    text-align: center;
+    background: white;
+    padding: 2rem 1rem;
+}
+
+.about .content .icons-container .icons img {
+    height: 3rem;
+}
+
+.about .content .icons-container .icons h3 {
+    padding-top: 8px;
+    font-size: 20px;
+    color: grey;
+    font-weight: normal;
+}
+
+.food {
+    background: rgba(0, 0, 0, .1);
+}
+
+.food .slide {
+    text-align: center;
+    padding: 20px 15px;
+    transform: scale(.9);
+    opacity: .5;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: peru;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0;
+}
+.food .swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .7);
+    border: 3px solid grey;
+    border-radius: 36px;
+}
+
+.food .slide img {
+    height: 16rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.food .slide h3 {
+    font-size: 28px;
+    padding: 1rem 0;
+    color: grey;
+}
+
+.food .slide .price {
+    margin-top: 2px;
+    font-size: 24px;
+    color: peru;
+}
+
+.food-preview-container{
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.food-preview-container .food-preview{
+    text-align: center;
+    background: white;
+    padding: 2rem 1rem;
+    border-radius: .5rem;
+    display: none;
+    width: 32%;
+}
+.food-preview-container .food-preview.active{
+    display: inline-block;
+    animation: fadeIn 0.4s cubic-bezier(0.54, 1.3, .63, 1.34) backwards;
+}
+.food-preview-container .food-preview img{
+    height: 15rem;
+    margin-top: 5px;
+}
+.food-preview-container .food-preview h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: black;
+}
+.food-preview-container .food-preview .stars{
+    margin-bottom: 1rem;
+}
+.food-preview-container .food-preview .stars i{
+    font-size: 1rem;
+    color: peru;
+}
+.food-preview-container .food-preview p{
+    font-size: 1rem;
+    color: grey;
+    padding: 1rem 0;
+    line-height: 1;
+}
+.food-preview-container .food-preview .price{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: .5rem;
+}
+#close-preview{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+#close-preview:hover{
+    transform: rotate(90deg);
+}
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.review .box-container .box{
+    text-align: center;
+    padding: 1rem;
+    border: 0.5rem solid white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .3);
+    border-radius: 0.5rem;
+    flex: 1 1 18rem;
+    background: grey;
+    margin-top: 5rem;    
+}
+.review .box-container .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 1rem solid white;
+    margin-top: -6rem;
+    object-fit: cover;
+}
+.review .box-container .box h3{
+    font-size: 2rem;
+    color: white;
+    padding: 5px;
+}
+.review .box-container .box .stars i{
+    font-size: 1rem;
+    color: peru;
+    padding: 4px;
+}
+.review .box-container .box p{
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 6px 0;
+}
+.contact{
+    background: url(image/10.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.contact h2{
+    color: whit;
+    font-size: 35px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    padding-left: 40px;
+
+}
+.contact-flex{
+    display: flex;
+    color: black;
+}
+.contact1{
+    margin: 0 120px;
+}
+.contact1 h1{
+    padding-top: 10%;
+    padding-bottom: 30px;
+    font-size: 35px;
+    font-family: 'Dosis', sans-serif;
+}
+.contact1 p{
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 10%;
+    font-family: 'Dosis', sans-serif;
+}
+.contact1 i{
+    font-size: 40px;
+    padding-right: 12px;
+    padding-bottom: 30px;
+}
+.contact1 i:hover{
+    color: darkred;
+}
+footer {
+    margin-top: 15rem;
+    color: #6c0b56;
+    text-align: center;
+    padding: 1em 0;
+}

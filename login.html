@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <script>
+    function togglePassword() {
+      var passwordField = document.getElementById("password");
+      var icon = document.querySelector(".show-password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.textContent = "👁️";
+      } else {
+        passwordField.type = "password";
+        icon.textContent = "👁️";
+      }
+    }
+
+    function checkempty() {
+      n = /[0-9]/;
+      a = /[a-z]/;
+      AA = /[A-Z]/;
+      c = /[!@#$%^&*]/;
+      aa = document.getElementById('password').value;
+      if (aa == "") {
+        document.getElementById('hello').innerHTML = "PASSWORD IS MANDATORY"
+        document.getElementById('hello').style.color = 'red';
+        return false;
+      } else if (aa.length < 8) {
+        document.getElementById('hello').innerHTML = "PASSWORD LENGTH IS MUST BE 8 OR ABOVE"
+        return false;
+      } else if (!n.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CONTAIN NUMBER"
+        return false;
+      } else if (!a.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST SMALL CONTAIN ALPHABET"
+        return false;
+      } else if (!AA.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CAPITAL CONTAIN ALPHABET"
+        return false;
+      } else if (!c.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CONTAIN SPECIAL CHARACTER"
+        return false;
+      }
+      window.location.href = 'Home.html';
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Restaurant Name</h1>
+    <nav class="navigation">
+        <button class="ok" onclick="window.location.href='Home.html'">Home</button>
+        
+    </nav>
+</header>
+  <div class="wrapper">
+    <form action="process_login.php" method="post" onsubmit="return checkempty()">
+      <h1>Login</h1>
+      <div class="input-box">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <i class='bx bxs-lock-alt'></i>
+        <span class="show-password" onclick="togglePassword()">👁️</span>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" name="remember">Remember Me</label>
+        <a href="Forget.html">Forgot Password</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="Register.html">Register</a></p>
+      </div>
+      <div id="hello"></div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE FOOD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="home.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Restaurant Name</h1>
+        <nav class="navigation">
+            <button class="ok" onclick="scrollToHome()">Home</button>
+            <button class="ok" onclick="window.location.href='Menu.html'">Menu</button>
+            <button class="ok" onclick="scrollToFood()">Specials</button>
+            <button class="ok" onclick="scrollToContact()">Contact</button>
+            <button class="ok" onclick="window.location.href='login.html'">Login</button>
+        </nav>
+    </header>
+    <section class="Home" id="Home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: url(image/17.jpg) no-repeat;">
+                    <div class="content">
+                        <span>Outstanding Food</span>
+                        <h3>Delicious Cooking</h3>
+                        <a href="#" class="btn">GET STARTED</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background: url(image/18.jpg) no-repeat;">
+                    <div class="content">
+                        <span>Outstanding Food</span>
+                        <h3>Delicious Cooking</h3>
+                        <a href="#" class="btn">GET STARTED</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background: url(image/19.jpg) no-repeat;">
+                    <div class="content">
+                        <span>Outstanding Food</span>
+                        <h3>Delicious Cooking</h3>
+                        <a href="#" class="btn">GET STARTED</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="image">
+            <img src="image/15.jpg" alt="about">
+        </div>
+        <div class="content">
+            <h3 class="title">WELCOME TO OUR RESTAURANT</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis sed architecto nemo accusamus saepe
+                modi officia dicta sunt ad dolore quas, possimus exercitationem repudiandae vero, libero ipsum est.
+                Illum, vel.</p>
+            <a href="#" class="btn">READ MORE</a>
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="image/14.jpg" alt="icon">
+                    <h3>QUALITY FOOD</h3>
+                </div>
+                <div class="icons">
+                    <img src="image/11.jpg" alt="icon">
+                    <h3>FOOD & DRINKS</h3>
+                </div>
+                <div class="icons">
+                    <img src="image/16.jpg" alt="icon">
+                    <h3>EXPERT CHEFS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="food" id="menu">
+        <div class="heading">
+            <span>POPULAR DISHES</span>
+            <h3>OUR DELICIOUS FOOD</h3>
+        </div>
+        <div class="swiper food-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" data-name="food-1">
+                    <img src="image/3.jpg" alt="burger">
+                    <h3>VEG BURGER</h3>
+                    <div class="price">RS 100</div>
+                </div>
+                <div class="swiper-slide slide" data-name="food-2">
+                    <img src="image/4.jpg" alt="biryani">
+                    <h3>CHICKEN BIRYANI</h3>
+                    <div class="price">RS 200</div>
+                </div>
+                <div class="swiper-slide slide" data-name="food-3">
+                    <img src="image/5.jpg" alt="chicken burger">
+                    <h3>CRISPY CHICKEN BURGER</h3>
+                    <div class="price">RS 150</div>
+                </div>
+                <div class="swiper-slide slide" data-name="food-4">
+                    <img src="image/cake.jpg" alt="cake">
+                    <h3>BLACK FOREST CAKE</h3>
+                    <div class="price">RS 350</div>
+                </div>
+                <div class="swiper-slide slide" data-name="food-5">
+                    <img src="image/2.jpg" alt="spaghetti">
+                    <h3>SPAGHETTI</h3>
+                    <div class="price">RS 250</div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <button class="btn" onclick="window.location.href='Menu.html'">DISCOVER MENU</button>
+    </section>
+
+    <section class="food-preview-container">
+        <div id="close-preview" class="fas fa-times"></div>
+        <div class="food-preview" data-target="food-1">
+            <img src="image/3.jpg" alt="burger">
+
+            <h3>VEG BURGER</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi.</p>
+            <div class="price">RS 100</div>
+            <a href="#" class="btn">ORDER NOW</a>
+        </div>
+        <div class="food-preview" data-target="food-2">
+            <img src="image/4.jpg" alt="biryani">
+
+            <h3>CHICKEN BIRYANI</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi.</p>
+            <div class="price">RS 200</div>
+            <a href="#" class="btn">ORDER NOW</a>
+        </div>
+        <div class="food-preview" data-target="food-3">
+            <img src="image/5.jpg" alt="chicken burger">
+
+            <h3>CRISPY CHICKEN BURGER</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi.</p>
+            <div class="price">RS 150</div>
+            <a href="#" class="btn">ORDER NOW</a>
+        </div>
+        <div class="food-preview" data-target="food-4">
+            <img src="image/cake.jpg" alt="cake">
+
+            <h3>BLACK FOREST CAKE</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi.</p>
+            <div class="price">RS 350</div>
+            <a href="#" class="btn">ORDER NOW</a>
+        </div>
+        <div class="food-preview" data-target="food-5">
+            <img src="img6.png" alt="spaghetti">
+
+            <h3>SPAGHETTI</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi.</p>
+            <div class="price">RS 250</div>
+            <a href="#" class="btn">ORDER NOW</a>
+        </div>
+    </section>
+    <section class="review" id="review">
+        <div class="heading">
+            <span>OUR CUSTOMER</span>
+            <h3>REVIEWS</h3>
+            <div class="box-container">
+                <div class="box">
+                    <img src="image/8.jpg" alt="">
+                    <h3>SHIVAM KUMAR</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nulla.</p>
+                </div>
+                <div class="box">
+                    <img src="image/9.jpg" alt="">
+                    <h3>SANDEEP NAINWAL</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nulla.</p>
+                </div>
+                <div class="box">
+                    <img src="image/7.jpg" alt="">
+                    <h3>ANKIT MISHRA</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nulla.</p>
+                </div>
+                <div class="box">
+                    <img src="image/6.jpg" alt="">
+                    <h3>NANDANI AHUJA</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nulla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h3><span>CONTACT US</span></h3>
+        </div>
+        <div class="contact-flex">
+            <div class="contact1">
+                <h1>LOCATIONS</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">DIRECTIONS</a>
+            </div>
+            <div class="contact1">
+                <h1>OPENING HOURS</h1>
+                <p>MONDAY-FRIDAY <br><br>10:00 AM-8:00PM <br><br>
+                TEL NO: 0532-0812-53632</p>
+            </div>
+            <div class="contact1">
+                <h1>SOCIAL MEDIA</h1>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 THE FOOD. All rights reserved. <br><br>
+            DESIGN: ASHITA SINGH, PRATIMA SINGH, DHRUV JAISWAL, SAMRAN AKHTAR</p>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

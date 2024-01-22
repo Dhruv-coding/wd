@@ -1,0 +1,146 @@
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.43, 1.1, .62, 1.08);
+    text-transform: capitalize;
+}
+
+li {
+    float: left;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgba(159, 17, 81, 0), rgb(174, 155, 12));
+    align-items: center;
+    z-index: 99;
+    transition: background-color 0.5s ease;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #fc8019; 
+}
+
+.logo {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+}
+
+.navigation .ok {
+    width: 130px;
+    height: 50px;
+    background: #fc8019; 
+    border: 2px solid #fc8019;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.navigation .ok:hover {
+    background: white;
+    color: #fc8019; 
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.cart-page {
+    margin: 89px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    color: black;
+    background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgb(174, 155, 12));
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    
+}
+
+td a {
+    color: #ff523b;
+    font-size: 12px;
+}
+
+td img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}

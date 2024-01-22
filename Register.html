@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <script>
+    function togglePassword() {
+      var passwordField = document.getElementById("confirm-password");
+      var icon = document.querySelector(".show-password");
+      if (passwordField.type === "confirm-password") {
+        passwordField.type = "text";
+        icon.textContent = "👁️";
+      } else {
+        passwordField.type = "confirm-password";
+        icon.textContent = "👁️";
+      }
+    }
+
+    function confirmPassword() {
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirm-password').value;
+      var confirmPasswordMsg = document.getElementById('confirmPasswordMsg');
+
+      if (password !== confirmPassword) {
+        document.getElementById('hello').innerHTML  = "PASSWORDS DO NOT MATCH!";
+        return false;
+      } else {
+        confirmPasswordMsg.innerHTML = "";
+        return true;
+      }
+    }
+
+    function checkempty() {
+      var n = /[0-9]/;
+      var a = /[a-z]/;
+      var AA = /[A-Z]/;
+      var c = /[!@#$%^&*]/;
+      var aa = document.getElementById('password').value;
+
+      if (aa == "") {
+        document.getElementById('hello').innerHTML = "PASSWORD IS MANDATORY"
+        return false;
+      } else if (aa.length < 8) {
+        document.getElementById('hello').innerHTML = "PASSWORD LENGTH MUST BE 8 OR ABOVE"
+        return false;
+      } else if (!n.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CONTAIN NUMBER"
+        return false;
+      } else if (!a.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CONTAIN SMALL ALPHABET"
+        return false;
+      } else if (!AA.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CONTAIN CAPITAL ALPHABET"
+        return false;
+      } else if (!c.test(aa)) {
+        document.getElementById('hello').innerHTML = "PASSWORD MUST CONTAIN SPECIAL CHARACTER"
+        return false;
+      }
+
+      return confirmPassword();
+    }
+  </script>
+</head>
+<body>
+  <section>
+    <header>
+        <h1 class="logo">Restaurant Name</h1>
+        <nav class="navigation">
+            <button class="ok" onclick="window.location.href='Home.html'">Home</button>
+        </nav>
+    </header>
+  </section>
+  <div class="wrapper">
+    <form action="process_login.php" method="post" onsubmit="return checkempty()">
+      <h1>Register</h1>
+      <div class="input-box">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your Email" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <i class='bx bxs-lock-alt'></i>
+        
+      </div>
+      <div class="input-box">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Your Password" required>
+        <i class='bx bxs-lock-alt'></i>
+        <span class="show-password" onclick="togglePassword()">👁️</span>
+        <div id="confirmPasswordMsg" style="color:#fff;"></div>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" name="remember">Remember Me</label>
+      </div>
+      <button type="submit" class="btn">Register</button>
+      <div class="register-link">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+      <div id="hello"></div>
+    </form>
+  </div>
+</body>
+</html>
